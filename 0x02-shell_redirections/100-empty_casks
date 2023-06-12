@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -empty -o -type f -empty | sed 's|.*/||'
+find . -type d -empty -o -type f -empty | tr '\n' '\0' | xargs -0 printf '%s\n'
