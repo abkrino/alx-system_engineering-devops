@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type f ( -name ".gif" -o -name ".GIF" ) -exec sh -c 'for file do [[ -f "$file" ]] && echo "${file%.*}"; done' sh {} + | sort -f | uniq
